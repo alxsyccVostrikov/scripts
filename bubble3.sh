@@ -28,15 +28,18 @@ fi
 	done
 	'
 dirATUAL=$(pwd)
-	for i in ${ar[@]};do
+for i in ${ar[@]};do
 	for j in ${dir2[@]};do
-	for k in ${dir3[@]};do
+		for k in ${dir3[@]};do
 echo -e "\n\nim in $i\\$j"
-cd /c/$i/$j/ ; sh ../$arq $*
-if [ -d  /c/$i/$j/$k ]; then
-cd /c/$i/$j/$k ; sh ../../$arq $*
+if [ -d  /c/$i/$j ]; then
+	cd /c/$i/$j/ ; sh ../$arq $*
+	if [ -d  /c/$i/$j/$k ]; then
+		echo -e "\n\nim in $i\\$j\\$k"
+		cd /c/$i/$j/$k ; sh ../../$arq $*
+	fi
 fi
-done
-done
+		done
+	done
 done
 cd "$dirATUAL"
