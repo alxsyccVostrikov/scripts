@@ -35,17 +35,17 @@ echo "im in $scpt/`echo $?`"
 done 
 
 
-for scpt2 in ${scpts2[@]:3}; do
+for scpt2 in ${scpts2[@]}; do
 echo "im in lai/`echo $?`"
 	(
 	cd /c/gitlab2/lai/
-	git add $scpt2
+	git add ${scpt2:3}
 	#echo "$scpt2:`echo $?`"
-	git commit -m "updt $scpt2 scpt file"
+	git commit -m "updt ${scpt2:3} scpt file"
 	if [ $? -eq 0 ]; then
 	git push -f
 	else
-	echo "$scpt2:`echo $?`"
+	echo "${scpt2:3}:`echo $?`"
 	fi
 	)
 done;
