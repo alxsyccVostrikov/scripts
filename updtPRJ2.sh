@@ -7,7 +7,6 @@ scpts2=(`cd ..; ls *.sh`)
 
 
 #files in scritp folder
-ProcessorScriptFile(){
 for scpt in ${scpts[@]}; do
 echo "im in $FolderPath/scripts/$scpt:`echo $?`"
 	(
@@ -22,10 +21,8 @@ echo "im in $FolderPath/scripts/$scpt:`echo $?`"
 	fi
 	)
 done 
-}
 
 #folder in lai
-ProcessorLaiFolder(){
 for d in ${folders[@]}; do
 echo "im in $FolderPath/$d`echo $?`"
 	(
@@ -41,10 +38,8 @@ echo "im in $FolderPath/$d`echo $?`"
 	fi
 	)
 done 
-}
 
 #files in lai
-ProcessorLaiFile(){
 for scpt2 in ${scpts2[@]}; do
 echo "im in $FolderPath/$scpt2:`echo $?`"
 	(
@@ -59,8 +54,3 @@ echo "im in $FolderPath/$scpt2:`echo $?`"
 	fi
 	)
 done;
-}
-
-ProcessorLaiFolder
-ProcessorScriptFile
-ProcessorLaiFile	
