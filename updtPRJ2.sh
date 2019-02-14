@@ -39,9 +39,9 @@ echo "im in $FolderPath/scripts/$scpt:`echo $?`"
 
 	git push -f
 	else
-		git add .
-		git commit -m "updt $scpt scpt file,`date`"
-		git push -f
+	#	git add .
+	#	git commit -m "updt $scpt scpt file,`date`"
+	#	git push -f
 	echo "$FolderPath/$scpt:`echo $?`"
 	fi
 	)
