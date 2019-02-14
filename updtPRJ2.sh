@@ -45,7 +45,7 @@ echo -e "im in $FolderPath/scripts/$scpt/`#echo $?`\n"
 	#	git add .
 	#	git commit -m "updt $scpt scpt file,`date`"
 	#	git push -f
-	echo "im in $FolderPath/scripts/$scpt/`echo $?`"
+	echo "im in $FolderPath/scripts/$scpt/`#echo $?`"
 	fi
 	)
 done 
