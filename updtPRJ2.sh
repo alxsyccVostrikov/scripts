@@ -34,7 +34,7 @@ echo "im in $FolderPath/$d`echo $?`"
 	echo "$d`echo $?`"
 	git commit -m "updt $d folder"
 	if [ $? -eq 0 ]; then
-			ProcessorScriptFile
+#			ProcessorScriptFile
 		git push -f
 	else
 		echo "$d`echo $?`"
@@ -62,5 +62,5 @@ done;
 }
 
 ProcessorLaiFolder
-#ProcessorScriptFile
+ProcessorScriptFile
 ProcessorLaiFile	
