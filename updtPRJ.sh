@@ -29,7 +29,7 @@ echo "im in $scpt/`echo $?`"
 	if [ $? -eq 0 ]; then
 	git push -f
 	else
-	echo "$scpt`echo $?`"
+	echo "$scpt/`echo $?`"
 	fi
 	)
 done 
@@ -40,12 +40,12 @@ echo "im in lai/`echo $?`"
 	(
 	cd /c/gitlab2/lai/
 	git add $scpt2
-	echo "$scpt2:`echo $?`"
+	#echo "$scpt2:`echo $?`"
 	git commit -m "updt $scpt2 scpt file"
 	if [ $? -eq 0 ]; then
 	git push -f
 	else
-	echo "$scpt2`echo $?`"
+	echo "$scpt2/`echo $?`"
 	fi
 	)
 done;
