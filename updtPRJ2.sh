@@ -39,6 +39,9 @@ echo "im in $FolderPath/scripts/$scpt:`echo $?`"
 
 	git push -f
 	else
+		git add .
+		git commit -m "updt $scpt scpt file,`date`"
+		git push -f
 	echo "$FolderPath/$scpt:`echo $?`"
 	fi
 	)
@@ -53,10 +56,13 @@ echo "im in $FolderPath/$scpt2:`echo $?`"
 	cd $FolderPath
 	git add .
 	#echo "$scpt2:`echo $?`"
-	git commit -m "updt scpts file,`date`"
+	git commit -m "updt scpt file,`date`"
 	if [ $? -eq 0 ]; then
 	git push -f
 	else
+		git add *.sh *.txt
+		git commit -m "updt $scpt scpt file,`date`"
+		git push -f
 	echo "${scpt2}:`echo $?`"
 	fi
 	)
