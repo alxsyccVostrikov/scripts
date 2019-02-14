@@ -1,7 +1,7 @@
 folders=(`ls -p ../ | egrep /`)
 scpts=(`ls *.sh`)
-scpts2=(`ls ../*.sh`)
-: '
+scpts2=(`cd ..; ls *.sh`)
+
 for d in ${folders[@]}; do
 
 echo "im in $d`echo $?`"
@@ -17,7 +17,6 @@ echo "im in $d`echo $?`"
 	fi
 	)
 done 
-'
 
 for scpt in ${scpts[@]}; do
 echo "im in $scpt/`echo $?`"
@@ -41,11 +40,11 @@ echo "im in lai/`echo $?`"
 	cd /c/gitlab2/lai/
 	git add ${scpt2:3}
 	#echo "$scpt2:`echo $?`"
-	git commit -m "updt ${scpt2:3} scpt file"
+	git commit -m "updt ${scpt2} scpt file"
 	if [ $? -eq 0 ]; then
 	git push -f
 	else
-	echo "${scpt2:3}:`echo $?`"
+	echo "${scpt2}:`echo $?`"
 	fi
 	)
 done;
