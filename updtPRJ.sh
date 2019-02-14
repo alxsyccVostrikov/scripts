@@ -47,7 +47,7 @@ for scpt2 in ${scpts2[@]}; do
 echo "im in $FolderPath/$scpt2:`echo $?`"
 	(
 	cd $FolderPath/
-	git add ${scpt2:3}
+	git add ${scpt2}
 	#echo "$scpt2:`echo $?`"
 	git commit -m "updt ${scpt2} scpt file"
 	if [ $? -eq 0 ]; then
