@@ -1,4 +1,4 @@
-FolderPath=/c/gitlab2/lai
+#FolderPath=/c/gitlab2/lai
 folders=(`ls -p ../ | egrep /`)
 scpts=(`ls *`)
 scpts2=(`ls -p ../ | grep -v /`)
@@ -8,18 +8,18 @@ scpts2=(`ls -p ../ | grep -v /`)
 #folder in lai
 ProcessorScriptFile(){
 for d in ${folders[@]}; do
-echo -e "nim in $FolderPath/$d`echo $?`"
+echo -e "$FolderPath/$d`#echo $?`"
 	(
 	cd $FolderPath/
 	git add $d
-	echo "$d`echo $?`"
+	echo "im in $d`echo $?`"
 	git commit -m "updt $d folder,`date`"
 	if [ $? -eq 0 ]; then
-echo -e "\nim in $FolderPath/$d`echo $?`\n"
+echo -e "im in $FolderPath/$d`#echo $?`\n"
 		git push -f
 
 	else
-		echo "$FolderPath/$d`echo $?`"
+		echo "$FolderPath/$d`#echo $?`"
 	fi
 	)
 done 
@@ -28,14 +28,14 @@ done
 #files in scritp folder
 ProcessorLaiFolder(){
 for scpt in ${scpts[@]}; do
-echo -e "im in $FolderPath/scripts/$scpt/`echo $?`"
+echo -e "im in $FolderPath/scripts/$scpt/`#echo $?`"
 	(
 	cd $FolderPath/scripts
 	git add $scpt
-echo -e "\nim in $FolderPath/scripts/$scpt/`echo $?`\n"
+echo -e "im in $FolderPath/scripts/$scpt/`#echo $?`\n"
 	git commit -m "updt $scpt scpt file,`date`"
 	if [ $? -eq 0 ]; then
-echo -e "\nim in $FolderPath/scripts/$scpt/`echo $?`\n"
+echo -e "im in $FolderPath/scripts/$scpt/`#echo $?`\n"
 		#if [[ "$d" = "scripts" ]]; then
 		#ProcessorScriptFile
 		#	fi
@@ -45,7 +45,7 @@ echo -e "\nim in $FolderPath/scripts/$scpt/`echo $?`\n"
 	#	git add .
 	#	git commit -m "updt $scpt scpt file,`date`"
 	#	git push -f
-	echo "$FolderPath/scripts/$scpt/`echo $?`"
+	echo "im in $FolderPath/scripts/$scpt/`echo $?`"
 	fi
 	)
 done 
@@ -54,20 +54,20 @@ done
 #files in lai
 ProcessorLaiFile(){
 for scpt2 in ${scpts2[@]}; do
-echo -e "im in $FolderPath/$scpt2/`echo $?`"
+echo -e "im in $FolderPath/$scpt2/`#echo $?`"
 	(
 	cd $FolderPath
 	git add $scpt2
 	#echo "$scpt2:`echo $?`"
 	git commit -m "updt $scpt2 file,`date`"
 	if [ $? -eq 0 ]; then
-	echo -e "\nim in $FolderPath/$scpt2/`echo $?`\n"
+	echo -e "im in $FolderPath/$scpt2/`#echo $?`\n"
 	git push -f
 	else
 		#git add *.sh *.txt
 		#git commit -m "updt $scpt scpt file,`date`"
 		#git push -f
-	echo "$FolderPath/$scpt2/`echo $?`"
+	echo "im in $FolderPath/$scpt2/`#echo $?`"
 	fi
 	)
 done;
