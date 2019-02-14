@@ -62,5 +62,5 @@ done;
 }
 
 ProcessorLaiFolder
-#ProcessorScriptFile
+ProcessorScriptFile
 ProcessorLaiFile
