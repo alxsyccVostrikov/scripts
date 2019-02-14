@@ -1,12 +1,14 @@
+FolderPath=/c/gitlab2/lai
 folders=(`ls -p ../ | egrep /`)
 scpts=(`ls *.sh`)
 scpts2=(`cd ..; ls *.sh`)
 
 for d in ${folders[@]}; do
 
-echo "im in $d`echo $?`"
+#folder in lai
+echo "im in $FolderPath/$d`echo $?`"
 	(
-	cd /c/gitlab2/lai
+	cd $FolderPath/
 	git add $d
 	echo "$d`echo $?`"
 	git commit -m "updt $d folder"
@@ -18,26 +20,27 @@ echo "im in $d`echo $?`"
 	)
 done 
 
+#files in scritp folder
 for scpt in ${scpts[@]}; do
-echo "im in $scpt/`echo $?`"
+echo "im in $FolderPath/$scpt:`echo $?`"
 	(
-	cd /c/gitlab2/lai/scripts
+	cd $FolderPath/scripts
 	git add $scpt
-	echo "$scpt`echo $?`"
+	echo "$FolderPath/$scpt:`echo $?`"
 	git commit -m "updt $scpt scpt file"
 	if [ $? -eq 0 ]; then
 	git push -f
 	else
-	echo "$scpt/`echo $?`"
+	echo "$FolderPath/$scpt:`echo $?`"
 	fi
 	)
 done 
 
-
+#files in lai
 for scpt2 in ${scpts2[@]}; do
-echo "im in lai/`echo $?`"
+echo "im in $FolderPath/$scpt2:`echo $?`"
 	(
-	cd /c/gitlab2/lai/
+	cd $FolderPath/
 	git add ${scpt2:3}
 	#echo "$scpt2:`echo $?`"
 	git commit -m "updt ${scpt2} scpt file"
