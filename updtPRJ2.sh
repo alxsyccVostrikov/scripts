@@ -8,7 +8,7 @@ scpts2=(`ls -p ../ | grep -v /`)
 #folder in lai
 ProcessorScriptFile(){
 for d in ${folders[@]}; do
-echo -e "\nim in $FolderPath/$d`echo $?`\n"
+echo -e "nim in $FolderPath/$d`echo $?`"
 	(
 	cd $FolderPath/
 	git add $d
@@ -28,7 +28,7 @@ done
 #files in scritp folder
 ProcessorLaiFolder(){
 for scpt in ${scpts[@]}; do
-echo -e "\nim in $FolderPath/scripts/$scpt:`echo $?`\n"
+echo -e "im in $FolderPath/scripts/$scpt:`echo $?`"
 	(
 	cd $FolderPath/scripts
 	git add $scpt
@@ -54,7 +54,7 @@ done
 #files in lai
 ProcessorLaiFile(){
 for scpt2 in ${scpts2[@]}; do
-echo -e "\nim in $FolderPath/$scpt2:`echo $?`\n"
+echo -e "im in $FolderPath/$scpt2:`echo $?`"
 	(
 	cd $FolderPath
 	git add $scpt2
