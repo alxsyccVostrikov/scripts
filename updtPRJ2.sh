@@ -31,8 +31,22 @@ echo "im in $d`echo $?`"
 	git commit -m "updt $d folder"
 	if [ $? -eq 0 ]; then
 		if [ $d == "scripts" ]; then
-		(cd $d;git add $scpt;git commit -m "updt $scpt scpt file";git push -f)
-		fi
+		for scpt in ${scpts[@]}; do
+echo "im in $scpt/`echo $?`"
+	(
+	cd /c/gitlab2/lai/scripts
+	git add $scpt
+	echo "$scpt`echo $?`"
+	git commit -m "updt $scpt scpt file"
+	if [ $? -eq 0 ]; then
+	git push -f
+	else
+	echo "$scpt/`echo $?`"
+	fi
+	)
+done
+
+fi
 	git push -f
 	else
 	echo "$d`echo $?`"
