@@ -33,10 +33,11 @@ echo "im in $FolderPath/$d`echo $?`"
 	git commit -m "updt $d folder,`date`"
 	if [ $? -eq 0 ]; then
 		#if [ $d == "scripts" ]; then
-echo -e"\n\nim seeing you $d"		
-		ProcessorScriptFile
+#		ProcessorScriptFile
 		#	fi
 		git push -f
+		echo -e"im seeing you $d\n\n"		
+
 	else
 		echo "$d`echo $?`"
 	fi
