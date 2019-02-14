@@ -13,7 +13,7 @@ echo "im in $FolderPath/scripts/$scpt:`echo $?`"
 	cd $FolderPath/scripts
 	git add $scpt
 	echo "$FolderPath/$scpt:`echo $?`"
-	git commit -m "updt $scpt scpt file"
+	git commit -m "updt $scpt scpt file,`date`"
 	if [ $? -eq 0 ]; then
 	git push -f
 	else
@@ -30,7 +30,7 @@ echo "im in $FolderPath/$d`echo $?`"
 	cd $FolderPath/
 	git add $d
 	echo "$d`echo $?`"
-	git commit -m "updt $d folder"
+	git commit -m "updt $d folder,`date`"
 	if [ $? -eq 0 ]; then
 		if [ $d = "scripts" ]; then
 			ProcessorScriptFile
@@ -50,7 +50,7 @@ echo "im in $FolderPath/$scpt2:`echo $?`"
 	cd $FolderPath
 	git add ${scpt2}
 	#echo "$scpt2:`echo $?`"
-	git commit -m "updt ${scpt2} scpt file"
+	git commit -m "updt ${scpt2} scpt file,`date`"
 	if [ $? -eq 0 ]; then
 	git push -f
 	else
