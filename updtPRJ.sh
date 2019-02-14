@@ -35,7 +35,7 @@ echo "im in $scpt/`echo $?`"
 done 
 
 
-for scpt2 in ${scpts2[@]}; do
+for scpt2 in ${scpts2[@]:3}; do
 echo "im in lai/`echo $?`"
 	(
 	cd /c/gitlab2/lai/
@@ -45,7 +45,7 @@ echo "im in lai/`echo $?`"
 	if [ $? -eq 0 ]; then
 	git push -f
 	else
-	echo "$scpt2/`echo $?`"
+	echo "$scpt2:`echo $?`"
 	fi
 	)
 done;
