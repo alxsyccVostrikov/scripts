@@ -3,9 +3,11 @@ folders=(`ls -p ../ | egrep /`)
 scpts=(`ls *.sh`)
 scpts2=(`cd ..; ls *.sh`)
 
-for d in ${folders[@]}; do
+
 
 #folder in lai
+ProcessorLaiFolder(){
+for d in ${folders[@]}; do
 echo "im in $FolderPath/$d`echo $?`"
 	(
 	cd $FolderPath/
@@ -19,10 +21,11 @@ echo "im in $FolderPath/$d`echo $?`"
 	fi
 	)
 done 
-
+}
 #files in scritp folder
+ProcessorScriptFile(){
 for scpt in ${scpts[@]}; do
-echo "im in $FolderPath/$scpt:`echo $?`"
+echo "im in $FolderPath/scripts/$scpt:`echo $?`"
 	(
 	cd $FolderPath/scripts
 	git add $scpt
@@ -35,8 +38,11 @@ echo "im in $FolderPath/$scpt:`echo $?`"
 	fi
 	)
 done 
+}
+
 
 #files in lai
+ProcessorLaiFile(){
 for scpt2 in ${scpts2[@]}; do
 echo "im in $FolderPath/$scpt2:`echo $?`"
 	(
@@ -51,4 +57,8 @@ echo "im in $FolderPath/$scpt2:`echo $?`"
 	fi
 	)
 done;
+}
 
+ProcessorLaiFolder
+ProcessorScriptFile
+ProcessorLaiFile	
