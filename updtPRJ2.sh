@@ -5,7 +5,7 @@ scpts2=(`cd ..; ls *.sh`)
 
 
 
-
+ProcessorLaiFolder(){
 #files in scritp folder
 for scpt in ${scpts[@]}; do
 echo "im in $FolderPath/scripts/$scpt:`echo $?`"
@@ -21,8 +21,9 @@ echo "im in $FolderPath/scripts/$scpt:`echo $?`"
 	fi
 	)
 done 
-
+}
 #folder in lai
+ProcessorScriptFile(){
 for d in ${folders[@]}; do
 echo "im in $FolderPath/$d`echo $?`"
 	(
@@ -31,15 +32,18 @@ echo "im in $FolderPath/$d`echo $?`"
 	echo "$d`echo $?`"
 	git commit -m "updt $d folder"
 	if [ $? -eq 0 ]; then
-#			ProcessorScriptFile
+		if [ $d = "scripts" ]; then
+			ProcessorScriptFile
+			fi
 		git push -f
 	else
 		echo "$d`echo $?`"
 	fi
 	)
 done 
-
+}
 #files in lai
+ProcessorLaiFile(){
 for scpt2 in ${scpts2[@]}; do
 echo "im in $FolderPath/$scpt2:`echo $?`"
 	(
@@ -54,3 +58,8 @@ echo "im in $FolderPath/$scpt2:`echo $?`"
 	fi
 	)
 done;
+}
+
+ProcessorLaiFolder
+#ProcessorScriptFile
+ProcessorLaiFile
