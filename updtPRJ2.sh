@@ -15,6 +15,10 @@ echo "im in $FolderPath/scripts/$scpt:`echo $?`"
 	echo "$FolderPath/$scpt:`echo $?`"
 	git commit -m "updt $scpt scpt file,`date`"
 	if [ $? -eq 0 ]; then
+		if [ $d == "scripts" ]; then
+		ProcessorScriptFile
+			fi
+
 	git push -f
 	else
 	echo "$FolderPath/$scpt:`echo $?`"
@@ -32,11 +36,7 @@ echo "im in $FolderPath/$d`echo $?`"
 	echo "$d`echo $?`"
 	git commit -m "updt $d folder,`date`"
 	if [ $? -eq 0 ]; then
-		#if [ $d == "scripts" ]; then
-#		ProcessorScriptFile
-		#	fi
 		git push -f
-		echo -e"im seeing you $d\n\n"		
 
 	else
 		echo "$d`echo $?`"
@@ -63,5 +63,5 @@ done;
 }
 
 ProcessorLaiFolder
-ProcessorScriptFile
+#ProcessorScriptFile
 ProcessorLaiFile
