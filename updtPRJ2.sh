@@ -1,7 +1,7 @@
 FolderPath=/c/gitlab2/lai
 folders=(`ls -p ../ | egrep /`)
-scpts=(`ls *.sh`)
-scpts2=(`cd ..; ls *.sh`)
+scpts=(`ls *`)
+scpts2=(`ls -p ../ | grep -v /`)
 
 
 #folder in lai
@@ -60,9 +60,9 @@ echo "im in $FolderPath/$scpt2:`echo $?`"
 	if [ $? -eq 0 ]; then
 	git push -f
 	else
-		git add *.sh *.txt
-		git commit -m "updt $scpt scpt file,`date`"
-		git push -f
+		#git add *.sh *.txt
+		#git commit -m "updt $scpt scpt file,`date`"
+		#git push -f
 	echo "${scpt2}:`echo $?`"
 	fi
 	)
