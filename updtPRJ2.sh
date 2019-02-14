@@ -51,9 +51,9 @@ for scpt2 in ${scpts2[@]}; do
 echo "im in $FolderPath/$scpt2:`echo $?`"
 	(
 	cd $FolderPath
-	git add ${scpt2}
+	git add .
 	#echo "$scpt2:`echo $?`"
-	git commit -m "updt ${scpt2} scpt file,`date`"
+	git commit -m "updt scpts file,`date`"
 	if [ $? -eq 0 ]; then
 	git push -f
 	else
