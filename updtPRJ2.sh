@@ -33,7 +33,7 @@ echo "im in $FolderPath/scripts/$scpt:`echo $?`"
 	echo "$FolderPath/$scpt:`echo $?`"
 	git commit -m "updt $scpt scpt file,`date`"
 	if [ $? -eq 0 ]; then
-		if [ $d = "scripts" ]; then
+		if [ $d -eq "scripts" ]; then
 		ProcessorScriptFile
 			fi
 
