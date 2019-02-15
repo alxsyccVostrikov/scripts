@@ -1,4 +1,4 @@
-#FolderPath=/c/gitlab2/lai
+FolderPath=/c/gitlab2/lai
 folders=(`ls -p ../ | egrep /`)
 scpts=(`ls *`)
 scpts2=(`ls -p ../ | grep -v /`)
