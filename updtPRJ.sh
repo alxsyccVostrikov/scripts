@@ -1,3 +1,4 @@
+#Developed by alxsy mostovik
 FolderPath=/c/gitlab2/lai
 folders=(`ls -p ../ | egrep /`)
 scpts=(`ls *.sh`)
