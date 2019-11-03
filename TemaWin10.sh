@@ -1,4 +1,3 @@
-install(){
 sudo add-apt-repository ppa:embrosyn/cinnamon -y
 sudo apt update -y
 sudo apt install cinnamon
@@ -11,4 +10,3 @@ sudo add-apt-repository ppa:noobslab/themes -y
 sudo apt-get update -y
 sudo apt-get install windos-10-themes -y
 }
-$*

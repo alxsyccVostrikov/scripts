@@ -1,14 +1,14 @@
-sudo apt-get update
+sudo apt-get update -y
 
-sudo apt-get install xinit
-sudo apt-get install lxde-core
-sudo apt-get install lxdm
+sudo apt-get install xinit -y
+sudo apt-get install lxde-core -y
+sudo apt-get install lxdm -y
 
 sudo reboot
 
-apt-get install lxsession-logout
+apt-get install lxsession-logout -y
 #sudo apt-get install lxterminal
-sudo apt-get install leafpad
+sudo apt-get install leafpad -y
 #sudo leafpad /etc/lxdm/default.conf
 
 sudo reboot

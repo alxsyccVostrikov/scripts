@@ -1,16 +1,17 @@
-this roject was developed by alxsy mostovik,student of Estacio university
-developer,developed,development
-call it of scripts,using for simple ways of management 
-email to contact md5($email)
-<<alxsy mostovik
-mult
-alxsy mostovik
-: '
-mult
-'
-#single l
-#single l
-
-$(: middle)
-`#middle`
-`# middle`
+	this roject was developed by alxsy mostovik,student of Estacio university
+	developer,developed,development
+	call it of scripts,using for simple ways of management 
+	email to contact md5($email)
+	<<alxsy mostovik
+	mult
+	alxsy mostovik
+	: '
+	mult
+	'
+	#single l
+	#single l
+	
+	$(: middle)
+	`#middle`
+	`# middle`
+	
