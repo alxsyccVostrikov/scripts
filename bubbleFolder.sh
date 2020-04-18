@@ -1,5 +1,6 @@
 	#Bubble sort written by alexsy mostovik
 	arq=scp.sh
+	dir="./"
 	ar=(gitlab bitbucket)
 	echo vou arrumar:${ar[@]}
 	for((i=0;i<${#ar[@]}-1;i++));do
@@ -13,6 +14,6 @@
 		done
 	done
 	for i in ${ar[@]};do
-		cd /c/$i/lai/
+		cd $dir
 		sh $arq $*
 	done

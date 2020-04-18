@@ -1,11 +1,11 @@
 		mysqlscp(){
-			apt-get update -y
-			apt-get install mysql-server mysql-client -y
-			service mysql start	
-			mysql_secure_installation
+			sudo apt-get update -y
+			sudo apt-get install mysql-server mysql-client -y
+			sudo service mysql start	
+			sudo mysql_secure_installation
 		}
 
-				apt-get update -y
-				mysqlscp
-				apt-get install mysql-workbench -y
+				sudo apt-get update -y
+				sudo mysqlscp
+				sudo apt-get install mysql-workbench -y
 		
